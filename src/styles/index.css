@@ -20,16 +20,25 @@ body {
     background-color: #b1cbe0de;
     margin-top: 2rem;
     max-height: 10vh;
+  width: min(92vw, 420px);
+  text-align: center;
    
+}
+
+#title-card strong {
+  font-size: clamp(1rem, 3.8vw, 1.6rem);
 }
 
 .card {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
     background-color: #6087a8;
     cursor: pointer;
+}
+
+.memory-card {
+  font-size: 2rem;
 }
 
 .card.visible {
@@ -45,6 +54,30 @@ body {
 .wobble-hor-bottom {
 	-webkit-animation: wobble-hor-bottom 0.8s both;
 	        animation: wobble-hor-bottom 0.8s both;
+}
+
+.memory-game .btn {
+  margin: 0.75rem auto 0;
+  display: inline-block;
+  width: 50%;
+  height: 3rem;
+}
+
+@media (max-width: 576px) {
+  #title-card {
+    width: 94vw;
+    margin-top: 1rem;
+  }
+
+  #title-card strong {
+    font-size: clamp(0.95rem, 4.8vw, 1.2rem);
+  }
+
+  .memory-game .btn {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.75rem;
+    height: 2.5rem;
+  }
 }
 
 

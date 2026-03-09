@@ -74,7 +74,7 @@ const Home = () => {
 				{cards && cards.map(card =>
 					<div
 						key={card.id}
-						className={`col-4 card ${selected.includes(card) || card.matched ? 'visible flip-in-hor-bottom' : 'wobble-hor-bottom'}`}
+						className={`col-4 card memory-card ${selected.includes(card) || card.matched ? 'visible flip-in-hor-bottom' : 'wobble-hor-bottom'}`}
 						onClick={() => handleClick(card)}
 					>
 						{selected.includes(card) || card.matched ? card.content : "❔"}

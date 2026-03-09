@@ -1,42 +1,100 @@
-# Hello World with React boilerplate
+# Juego de Memoria (React)
 
-Start coding a react application
+Proyecto de estudio desarrollado con React para practicar lógica de juego, manejo de estado y renderizado dinámico en el navegador.
 
-> If you are working locally instead of using codespaces or gitpod, please follow [local installation steps](#local-installation-skip-if-you-are-working-on-codespaces-or-gitpod) and come back to this part of the readme.
+El objetivo es descubrir todos los pares de cartas con emojis. Cuando se completan todas las coincidencias, se muestra un mensaje de éxito.
 
-## How to start coding?
+## Demo del proyecto
 
-- Install the packages with `$ npm install`.
-- Run the webpack server with `$ npm run start`
+- Vercel: `https://vercel.com/gaby-bevilacquas-projects/juego-memoria-taller`
 
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+## Tecnologías usadas
 
-## Local Installation (skip if you are working on codespaces or gitpod)
+- React
+- JavaScript (ES6+)
+- CSS3 (animaciones con keyframes)
+- SweetAlert2 (alerta de victoria)
+- Webpack + Babel
 
-Download the boilerplate using git
+## ¿Qué hace la app?
 
+- Muestra una grilla de cartas con símbolos ocultos.
+- Permite seleccionar hasta 2 cartas por turno.
+- Comprueba si ambas cartas coinciden.
+- Si coinciden, quedan descubiertas.
+- Si no coinciden, se vuelven a ocultar.
+- Cuando todas las cartas están emparejadas, muestra una alerta de “juego completado”.
+- Incluye botón para volver a jugar y mezclar cartas nuevamente.
+
+## Lo aprendido con este proyecto
+
+Este proyecto me ayudó a reforzar conceptos clave de Frontend y React:
+
+- Uso de `useState` para manejar estados del juego (cartas, selección actual, cartas acertadas).
+- Uso de `useEffect` para reaccionar a cambios de estado y ejecutar la lógica de validación.
+- Renderizado condicional para mostrar carta descubierta u oculta según su estado.
+- Manejo de eventos (`onClick`) para la interacción del usuario.
+- Lógica de comparación de pares y control del flujo por turnos.
+- Importancia de reiniciar estado correctamente al empezar una nueva partida.
+- Aplicación de animaciones CSS para mejorar la experiencia visual.
+- Integración de librerías externas (SweetAlert2) para feedback al usuario.
+
+Además, fue una buena práctica para entender cómo separar responsabilidades entre:
+
+- lógica del componente,
+- estructura visual (JSX),
+- estilos y animaciones (CSS).
+
+## Estructura principal
+
+```text
+src/
+	js/
+		index.js
+		component/
+			home.jsx
+	styles/
+		index.css
 ```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
+
+## Instalación y ejecución local
+
+1. Instalar dependencias:
+
+```bash
+npm install
 ```
 
-## Publish your website!
+2. Iniciar entorno de desarrollo:
 
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
+```bash
+npm run start
+```
 
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+3. Generar build de desarrollo:
 
-## Other features
+```bash
+npm run build
+```
 
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
+## Deploy
 
-### Contributors
+Para publicar en GitHub Pages:
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+```bash
+npm run deploy:github
+```
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+También puedes desplegar en Vercel siguiendo la guía del proyecto en `docs/DEPLOY.md`.
+
+## Próximas mejoras (ideas)
+
+- Contador de movimientos.
+- Temporizador por partida.
+- Niveles de dificultad (más cartas).
+- Persistir récord (mejor tiempo o menos movimientos).
+- Mejoras de accesibilidad (teclado, focus, contraste).
+
+## Autoría
+
+Proyecto realizado como práctica personal para consolidar fundamentos de React y lógica de programación aplicada a juegos simples.
